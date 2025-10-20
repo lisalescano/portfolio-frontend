@@ -17,7 +17,7 @@ export default function App() {
           <h3 className="mt-6 text-black max-w-2xl mx-auto text-brand-green-800 font-mono font-bold text-center">
             Welcome to my portfolio! My name is Lisandro Lescano, I am a 22 years old passionate programmer.
             I invite you to explore my work, where each project reflects my dedication to learning, innovation, and creativity.
-            Whether it's a complex application or a simple design, I hope you'll find something that resonates with you.
+            Whether it&apos;s a complex application or a simple design, I hope you&apos;ll find something that resonates with you.
             Thank you for stopping by, and I hope you enjoy your time here!
           </h3>
         </section>
@@ -37,7 +37,7 @@ export default function App() {
         <section id="about" className="px-6 sm:px-10 py-10 scroll-mt-14">
           <h2 className="pb-3 font-bold text-center text-brand-orange-800 text-3xl font-mono">About me</h2>
           <p className="text-center text-brand-brown-700 max-w-2xl mx-auto mb-8">
-          I build things that work (most of the time). When I'm not coding, I'm probably playing videogames or questioning my life choices 😁.
+          I build things that work (most of the time). When I&apos;m not coding, I&apos;m probably playing videogames or questioning my life choices 😁.
            Passionately curious!
           </p>
           
