@@ -1,5 +1,7 @@
 'use client'
 
+import Image from 'next/image'
+
 export default function AboutProject({ project, onClose }) {
   if (!project) return null
   const techs = project.Technologies || []
@@ -12,7 +14,9 @@ export default function AboutProject({ project, onClose }) {
           {techs.length > 0 && (
             <div className="mt-2 flex items-center gap-2">
               {techs.map(t => (
-                <img key={t.id} src={t.image} alt={t.name} title={t.name}
+                <Image key={t.id} src={t.image} alt={t.name} title={t.name}
+                  width={24}
+                  height={24}
                   className="h-6 w-6 rounded border border-brand-brown-200 object-cover bg-white" />
               ))}
             </div>
@@ -24,7 +28,13 @@ export default function AboutProject({ project, onClose }) {
       </div>
 
       <div className="mt-6">
-        <img src={project.image} alt={project.title} className="rounded-lg w-full h-72 sm:h-96 object-cover shadow" />
+        <Image 
+          src={project.image} 
+          alt={project.title} 
+          width={800}
+          height={384}
+          className="rounded-lg w-full h-72 sm:h-96 object-cover shadow" 
+        />
       </div>
 
       <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
