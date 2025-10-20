@@ -1,24 +1,25 @@
-// next.config.mjs
+// next.config.mjs - AGREGAR esto
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output: 'export', // ← QUITA esta línea
-  // trailingSlash: true, // ← QUITA esta línea
-  // images: {
-  //   unoptimized: true // ← QUITA esta línea
-  // },
+  output: 'standalone',
   
-  output: 'standalone', // ← MANTÉN esta línea
+  // 🔥 LIMITAR TAMAÑO DE FUNCIONES
+  experimental: {
+      serverComponentsExternalPackages: [],
+      largePageDataBytes: 128 * 1000, // 128KB máximo
+  },
   
-  // Configuración para evitar errores
+  // COMPRESIÓN AGGRESIVA
+  compress: true,
+  
   typescript: {
-    ignoreBuildErrors: true,
+      ignoreBuildErrors: true,
   },
   eslint: {
-    ignoreDuringBuilds: true,
+      ignoreDuringBuilds: true,
   },
-  
   env: {
-    ADMIN_PASSWORD: process.env.ADMIN_PASSWORD,
+      ADMIN_PASSWORD: process.env.ADMIN_PASSWORD,
   },
 }
 
