@@ -1,25 +1,23 @@
-// next.config.mjs - AGREGAR esto
+// next.config.mjs
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'standalone',
   
-  // 🔥 LIMITAR TAMAÑO DE FUNCIONES
+  // 🔥 IMPORTANTE: Deshabilitar cache de build innecesaria
   experimental: {
-      serverComponentsExternalPackages: [],
-      largePageDataBytes: 128 * 1000, // 128KB máximo
+    // Esto ayuda a reducir cache
+    optimizeCss: true,
+    serverComponentsExternalPackages: [],
   },
-  
-  // COMPRESIÓN AGGRESIVA
-  compress: true,
   
   typescript: {
-      ignoreBuildErrors: true,
+    ignoreBuildErrors: true,
   },
   eslint: {
-      ignoreDuringBuilds: true,
+    ignoreDuringBuilds: true,
   },
   env: {
-      ADMIN_PASSWORD: process.env.ADMIN_PASSWORD,
+    ADMIN_PASSWORD: process.env.ADMIN_PASSWORD,
   },
 }
 
