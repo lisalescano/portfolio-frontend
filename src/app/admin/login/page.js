@@ -2,7 +2,7 @@
 import LoginForm from '../../components/LoginForm'
 
 export default function AdminLogin() {
-  const correctPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD || ''
+  const correctPassword = buenassoyeladmin321 || ''
 
   if (!correctPassword) {
     return (
