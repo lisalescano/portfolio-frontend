@@ -1,12 +1,15 @@
+// next.config.mjs - Agrega esto
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    env: {
+  env: {
       ADMIN_PASSWORD: process.env.ADMIN_PASSWORD,
-    },
-    experimental: {
-      serverComponentsExternalPackages: [], // Limpia paquetes externos
   },
-    // Otras configuraciones que puedas tener...
-  }
-  
-  export default nextConfig
+  // Limitar tamaño de funciones
+  experimental: {
+      serverComponentsExternalPackages: [],
+  },
+  // Forzar standalone si el problema es de tamaño
+  output: 'standalone', // ← PRUEBA ESTO
+}
+
+export default nextConfig
