@@ -2,7 +2,7 @@
 import LoginForm from '../../components/LoginForm'
 
 export default function AdminLogin() {
-  const correctPassword = buenassoyeladmin321 || ''
+  const correctPassword = 'buenassoyeladmin321' || ''
 
   if (!correctPassword) {
     return (
