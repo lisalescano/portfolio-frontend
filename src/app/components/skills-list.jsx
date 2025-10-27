@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react'
 import { api } from './api'
-import Image from 'next/image'
 
 function Stars({ level }) {
   const full = Math.max(0, Math.min(5, Number(level) || 0))
@@ -40,13 +39,7 @@ export default function SkillsList() {
           {techs.map(t => (
             <li key={t.id} className="py-3 flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <Image 
-                  src={t.image} 
-                  alt={t.name} 
-                  width={24}
-                  height={24}
-                  className="h-6 w-6 rounded border border-brand-brown-200 object-cover" 
-                />
+                <img src={t.image} alt={t.name} className="h-6 w-6 rounded border border-brand-brown-200 object-cover" />
                 <span className="text-brand-brown-900 font-medium">{t.name}</span>
               </div>
               <Stars level={t.level} />
